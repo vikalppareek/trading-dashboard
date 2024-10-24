@@ -8,7 +8,7 @@ const Orders = () => {
   const [allOrders, setAllOrders] = useState([]);
 
   useEffect(() => {
-    axios.get("trading-dashboard-api.vercel.app").then((res) => {
+    axios.get("trading-dashboard-api.vercel.app/allOrders").then((res) => {
       console.log(res.data);
       setAllOrders(res.data);
     });
