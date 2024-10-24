@@ -20,6 +20,8 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+module.exports = app;  // Export the app
+
 // app.get("/addHoldings", async (req, res) => {
 //   let tempHoldings = [
 //     {
