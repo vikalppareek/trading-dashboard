@@ -9,7 +9,7 @@ const Positions = () => {
  const [allPositions, setAllPositions] = useState([]);
 
   useEffect(() => {
-    axios.get("trading-dashboard-api.vercel.app/allPositions").then((res) => {
+    axios.get("https://trading-dashboard-api.vercel.app/allPositions").then((res) => {
       console.log(res.data);
       setAllPositions(res.data);
     });
