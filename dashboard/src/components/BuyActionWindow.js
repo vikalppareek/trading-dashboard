@@ -12,13 +12,13 @@ const BuyActionWindow = ({ uid }) => {
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const handleBuyClick = () => {
-   axios.all([ axios.post("trading-dashboard-api.vercel.app", {
+   axios.all([ axios.post("trading-dashboard-api.vercel.app/newOrder", {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,
       mode: "BUY",
     }),
-    axios.post("trading-dashboard-api.vercel.app", {
+    axios.post("trading-dashboard-api.vercel.app/newHoldings", {
       name: uid,
       qty: stockQuantity,
       avg:120,
