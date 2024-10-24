@@ -12,13 +12,13 @@ const SellActionWindow = ({ uid }) => {
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const handleSellClick = () => {
-    axios.all([ axios.post("trading-dashboard-api.vercel.app/newOrder", {
+    axios.all([ axios.post("https://trading-dashboard-api.vercel.app/newOrder", {
         name: uid,
         qty: stockQuantity,
         price: stockPrice,
         mode: "SELL",
       }),
-      axios.delete("trading-dashboard-api.vercel.app/deleteHoldings", {
+      axios.delete("https://trading-dashboard-api.vercel.app/deleteHoldings", {
         params: {
             name: uid,
             qty: stockQuantity,
