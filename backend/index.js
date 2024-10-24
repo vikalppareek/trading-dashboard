@@ -17,7 +17,13 @@ const uri = process.env.MONGO_URL;
 
 const app = express();
 
-app.use(cors());
+app.use(cors(
+  {
+    origin: [""],
+    methods:["POST","GET"],
+    credentials:true
+  }
+));
 app.use(bodyParser.json());
 
 module.exports = app;  // Export the app
