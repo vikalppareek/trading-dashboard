@@ -341,6 +341,6 @@ app.post('/api/signup', async (req, res) => {
 
 app.listen(PORT, () => {
   console.log("App started! ");
-  mongoose.connect(uri);
+  mongoose.connect(mongodb+srv://pareekvikalp286:AyxFYo7HPFCZ4fjp@stockoracluster0.g845u.mongodb.net/stockora?retryWrites=true&w=majority&appName=Stockoracluster0);
   console.log("DB started!");
 });
