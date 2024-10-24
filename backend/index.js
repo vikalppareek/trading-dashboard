@@ -341,6 +341,11 @@ app.post('/api/signup', async (req, res) => {
 
 app.listen(PORT, () => {
   console.log("App started! ");
-  mongoose.connect(uri);
+  mongoose.connect(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => console.log('Connected to MongoDB'))
+.catch((err) => console.error('Error connecting to MongoDB:', err)););
   console.log("DB started!");
 });
