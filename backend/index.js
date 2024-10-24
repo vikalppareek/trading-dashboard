@@ -20,7 +20,7 @@ const app = express();
 app.use(cors(
   {
     origin: ["https://trading-dashboard-frontend.vercel.app"],
-    methods:["POST","GET"],
+    methods:["POST","GET","DELETE"],
     credentials:true
   }
 ));
