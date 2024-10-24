@@ -9,7 +9,7 @@ const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
   useEffect(() => {
-    axios.get("trading-dashboard-api.vercel.app").then((res) => {
+    axios.get("trading-dashboard-api.vercel.app/allHoldings").then((res) => {
       console.log(res.data);
       setAllHoldings(res.data);
     });
